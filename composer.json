@@ -1,0 +1,40 @@
+{
+  "name": "gueststream/bookingconfirmation",
+  "type": "library",
+  "description": "Booking confirmation class used in response to successful bookings.",
+  "keywords": [
+    "Gueststream",
+    "Booking Confirmation"
+  ],
+  "homepage": "https://github.com/Gueststream-Inc/BookingConfirmation",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Josh Houghtelin",
+      "email": "josh@gueststream.com",
+      "homepage": "http://www.gitphp.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : "~5.5|~7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "~4.0||~5.0",
+    "scrutinizer/ocular": "~1.1",
+    "squizlabs/php_codesniffer": "~2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gueststream\\Reservations\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Gueststream\\Reservations\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
