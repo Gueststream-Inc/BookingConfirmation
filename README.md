@@ -7,10 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Josh Houghtelin``` ```:author_username``` ```:author_website``` ```:author_email``` ```gueststream``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This is a simple value object class that contains booking confirmation information and is used in the [VRPConnector](https://github.com/Gueststream-Inc/VRPConnector/)  plugin on the confirmation page to display information to the guests who have just successfully booked a unit.
 
 ## Install
 
@@ -24,7 +21,10 @@ $ composer require gueststream/bookingconfirmation
 
 ``` php
 $bookingConfirmation = new Gueststream\Reservations\BookingConfirmation();
-echo $bookingConfirmation->getBookingNumber();
+$bookingConfirmation->setBookingNumber(1234);
+$bookingConfirmation->setArrivalDate('2020-12-01');
+$bookingConfirmation->setDepartureDate('2020-12-7');
+echo $bookingConfirmation->getNights();
 ```
 
 ## Change log
