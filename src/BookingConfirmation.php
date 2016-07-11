@@ -41,6 +41,13 @@ class BookingConfirmation implements JsonSerializable
     protected $totalCost;
 
     /**
+     * The Total amount charged to the guest's credit card.
+     *
+     * @var float
+     */
+    protected $totalCharged;
+
+    /**
      * @var boolean
      */
     protected $hasTravelInsurance = false;
@@ -193,6 +200,22 @@ class BookingConfirmation implements JsonSerializable
     public function setTotalCost($totalCost)
     {
         $this->totalCost = $totalCost;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalCharged()
+    {
+        return $this->totalCharged;
+    }
+
+    /**
+     * @param float $totalCharged
+     */
+    public function setTotalCharged($totalCharged)
+    {
+        $this->totalCharged = $totalCharged;
     }
 
     /**

@@ -33,6 +33,14 @@ class BookingConfirmationTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($totalCost, $bookingConfirmation->getTotalCost());
     }
 
+    public function testSetGetTotalCharged()
+    {
+        $totalCharged           = 23432.02;
+        $bookingConfirmation = new BookingConfirmation();
+        $bookingConfirmation->setTotalCharged($totalCharged);
+        $this->assertSame($totalCharged, $bookingConfirmation->getTotalCharged());
+    }
+
     public function testSetGetTravelInsurance()
     {
         $bookingConfirmation = new BookingConfirmation();
